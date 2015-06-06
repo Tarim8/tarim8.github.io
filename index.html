@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>index - Tarim</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="date" content="" />
+  <link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body>
+<div id="tarim-utilities"
+><h2
+  >Tarim Utilities</h2
+  ><div id="poll"
+  ><h3
+    ><a href="https://github.com/tarim8/poll"
+      >Poll</a
+      ></h3
+    ><p
+    >A Linux user command to monitor GPIO pins. Sends the contents of a special file (with optional text) to stdout. Useful for feeding changes in the state of switches or other hardware into your Python, Node JS, C++, AWK or whatever programming language floats your boat. Useful for the Raspberry Pi and other embedded Linux systems that use the /sys/class/gpio style files. GPIO pins can be set up with Gordon Hendersen's gpio control system in his excellent <a href="http://wiringpi.com/"
+      >Wiring Pi</a
+      > project.</p
+    ><div id="example"
+    ><h4
+      >Example</h4
+      ><pre
+      ><code
+	>poll --debounce 20 --unique +&quot;EncA %l\n&quot; /sys/class/gpio/gpio23/value +&quot;EncB %l\n&quot; /sys/class/gpio/gpio24/value
+</code
+	></pre
+      ><p
+      >Will give nice clean debounced values from a couple of switches attached to GPIO pins 23 and 24.</p
+      ><p
+      ><img src="images/cpp.png" title="C++" alt="C++"
+	 /> <img src="images/tux.png" alt="Linux"
+	 /> <a href="http://www.raspberrypi.org"
+	><img src="images/pi.png" alt="Raspberry Pi"
+	   /></a
+	></p
+      ><hr
+       /></div
+    ></div
+  ><div id="session"
+  ><h3
+    ><a href="https://github.com/tarim8/session"
+      >Session</a
+      ></h3
+    ><p
+    >A Bash script to launch commands with their own process group id. This allows them to be terminated cleanly. A kind of lightweight daemon control.</p
+    ><div id="example-1"
+    ><h4
+      >Example</h4
+      ><p
+      >omxplayer on the Raspberry Pi will create a subprocess to do the main work. So:</p
+      ><pre
+      ><code
+	>session /tmp/omx.pgid omxplayer video.mp4
+</code
+	></pre
+      ><p
+      >Allows the video to be terminated cleanly by:</p
+      ><pre
+      ><code
+	>session -k /tmp/omx.pgid
+</code
+	></pre
+      ><p
+      ><img src="images/bash.png" alt="Bash"
+	 /> <img src="images/tux.png" alt="Linux"
+	 /> <a href="http://www.raspberrypi.org"
+	><img src="images/pi.png" alt="Raspberry Pi"
+	   /></a
+	></p
+      ><hr
+       /></div
+    ></div
+  ><div id="waiter"
+  ><h3
+    ><a href="https://github.com/tarim8/Waiter"
+      >Waiter</a
+      ></h3
+    ><p
+    >A class for Arduino to make it easier to wait for an amount of time without going blocked (kind of essential on a single threaded device like an Arduino).</p
+    ><div id="example-2"
+    ><h4
+      >Example</h4
+      ><pre
+      ><code
+	>Waiter timer;
+const unsigned int DELAY = 1000;
+
+void function poll() {
+    if( timer.wait( DELAY ) ) {
+        digitalWrite( LED, !digitalRead( LED ) );
+    }
+}
+</code
+	></pre
+      ><p
+      >Creates a poll() routine which can be continually called (and not block) to flash an LED.</p
+      ><p
+      ><img src="images/cpp.png" alt="C++"
+	 /> <img src="images/arduino.png" alt="Arduino"
+	 /></p
+      ><hr
+       /></div
+    ></div
+  ></div
+>
+</body>
+</html>
+
