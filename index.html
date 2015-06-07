@@ -1,21 +1,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>index - Tarim</title>
+  <title>Index - Tarim GitHub Repositories</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="date" content="" />
   <link rel="stylesheet" href="css/main.css" type="text/css" />
 </head>
 <body>
-<div id="tarim-utilities"
+<h1 class="title">Tarim GitHub Repositories</h1>
+<div id="utilities"
 ><h2
-  >Tarim Utilities</h2
-  ><div id="poll"
+  >Utilities</h2
+  ><div id="poll-linux-raspberry-pi-c"
   ><h3
     ><a href="https://github.com/tarim8/poll"
       >Poll</a
-      ></h3
+      > <img src="images/tux.png" alt="Linux"
+       /> <a href="http://www.raspberrypi.org"
+      ><img src="images/pi.png" alt="Raspberry Pi"
+	 /></a
+      > <img src="images/cpp.png" title="C++" alt="C++"
+       /></h3
     ><p
     >A Linux user command to monitor GPIO pins. Sends the contents of a special file (with optional text) to stdout. Useful for feeding changes in the state of switches or other hardware into your Python, Node JS, C++, AWK or whatever programming language floats your boat. Useful for the Raspberry Pi and other embedded Linux systems that use the /sys/class/gpio style files. GPIO pins can be set up with Gordon Hendersen's gpio control system in his excellent <a href="http://wiringpi.com/"
       >Wiring Pi</a
@@ -29,22 +35,20 @@
 </code
 	></pre
       ><p
-      >Will give nice clean debounced values from a couple of switches attached to GPIO pins 23 and 24.</p
-      ><p
-      ><img src="images/cpp.png" title="C++" alt="C++"
-	 /> <img src="images/tux.png" alt="Linux"
-	 /> <a href="http://www.raspberrypi.org"
-	><img src="images/pi.png" alt="Raspberry Pi"
-	   /></a
-	></p
+      >gives nice clean debounced values from a couple of switches attached to GPIO pins 23 and 24.</p
       ><hr
        /></div
     ></div
-  ><div id="session"
+  ><div id="session-raspberry-pi-linux-bash"
   ><h3
     ><a href="https://github.com/tarim8/session"
       >Session</a
-      ></h3
+      > <a href="http://www.raspberrypi.org"
+      ><img src="images/pi.png" alt="Raspberry Pi"
+	 /></a
+      > <img src="images/tux.png" alt="Linux"
+       /> <img src="images/bash.png" alt="Bash"
+       /></h3
     ><p
     >A Bash script to launch commands with their own process group id. This allows them to be terminated cleanly. A kind of lightweight daemon control.</p
     ><div id="example-1"
@@ -58,27 +62,22 @@
 </code
 	></pre
       ><p
-      >Allows the video to be terminated cleanly by:</p
+      >allows the video to be terminated cleanly by:</p
       ><pre
       ><code
 	>session -k /tmp/omx.pgid
 </code
 	></pre
-      ><p
-      ><img src="images/bash.png" alt="Bash"
-	 /> <img src="images/tux.png" alt="Linux"
-	 /> <a href="http://www.raspberrypi.org"
-	><img src="images/pi.png" alt="Raspberry Pi"
-	   /></a
-	></p
       ><hr
        /></div
     ></div
-  ><div id="waiter"
+  ><div id="waiter-arduino-c"
   ><h3
     ><a href="https://github.com/tarim8/Waiter"
       >Waiter</a
-      ></h3
+      > <img src="images/arduino.png" alt="Arduino"
+       /> <img src="images/cpp.png" alt="C++"
+       /></h3
     ><p
     >A class for Arduino to make it easier to wait for an amount of time without going blocked (kind of essential on a single threaded device like an Arduino).</p
     ><div id="example-2"
@@ -98,10 +97,36 @@ void function poll() {
 	></pre
       ><p
       >Creates a poll() routine which can be continually called (and not block) to flash an LED.</p
+      ><hr
+       /></div
+    ></div
+  ></div
+><div id="projects"
+><h2
+  >Projects</h2
+  ><div id="totems-arduino-http-c"
+  ><h3
+    ><a href="https://github.com/tarim8/totems"
+      >Totems</a
+      > <img src="images/arduino.png" alt="Arduino"
+       /> <img src="images/http.png" alt="HTTP"
+       /> <img src="images/cpp.png" alt="C++"
+       /></h3
+    ><p
+    >Wicker dolls carried by the audience in <a href="http://www.raucous.org.uk/"
+      >Raucous</a
+      > Stick House production had their own heartbeat and could become cold during the production.</p
+    ><p
+    >The dolls contained small Arduino's (Leosticks), a remote control FM receiver, vibration motor and a Peltier heat exchanger. Control is via an Arduino connected to an FM transmitter running a very rudimentary HTTP server which reads a submitted form. In this case the Arduino was connected to a laptop but could equally well have a WiFi shield.</p
+    ><div id="notes"
+    ><h4
+      >Notes</h4
       ><p
-      ><img src="images/cpp.png" alt="C++"
-	 /> <img src="images/arduino.png" alt="Arduino"
-	 /></p
+      >The vibration motor works well as a heartbeat. The HTTP control system is effective and could easily be connected to other control systems.</p
+      ><p
+      >The FM signalling worked reasonably but may have range problems in certain venues. It is probably worth replacing this with a Zigbee mesh-net system even though this would take up slightly more space in the dolls.</p
+      ><p
+      >The Peltier's don't go cold enough for the audience members to notice. Trying to scale them up would involve too many power and heat dissipation problems to be practical.</p
       ><hr
        /></div
     ></div

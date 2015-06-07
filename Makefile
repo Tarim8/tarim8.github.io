@@ -1,4 +1,5 @@
 targets = index.html
+title = Tarim GitHub Repositories
 
 all:	$(targets)
 
@@ -7,7 +8,8 @@ all:	$(targets)
 	    --standalone \
 	    --css=css/main.css \
 	    --title-prefix="$*" \
-	    -V pagetitle="Tarim" \
+	    -V pagetitle="$(title)" \
+	    -V title="$(title)" \
 	    --base-header-level=2 \
 	    -o $@ $<
 

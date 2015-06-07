@@ -1,1 +1,4 @@
-h1 { font-size: 120%; }
+h3 img {
+    float: right;
+    padding-right: 10px;
+}

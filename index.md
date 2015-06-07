@@ -1,12 +1,11 @@
-Tarim Utilities
-===============
+Utilities
+=========
 
 
-
-[Poll][]
+[Poll][]        ![Linux](images/tux.png) [![Raspberry Pi](images/pi.png)][Pi] ![C++](images/cpp.png "C++")
 --------
 
-[Poll]: https://github.com/tarim8/poll
+  [Poll]: https://github.com/tarim8/poll
 
   A Linux user command to monitor GPIO pins.
   Sends the contents of a special file (with optional text) to stdout.
@@ -18,17 +17,13 @@ Tarim Utilities
 
     poll --debounce 20 --unique +"EncA %l\n" /sys/class/gpio/gpio23/value +"EncB %l\n" /sys/class/gpio/gpio24/value
 
-  Will give nice clean debounced values from a couple of switches attached to GPIO pins 23 and 24.
-
-  ![C++](images/cpp.png "C++")
-  ![Linux](images/tux.png)
-  [![Raspberry Pi](images/pi.png)][Pi]
+  gives nice clean debounced values from a couple of switches attached to GPIO pins 23 and 24.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-[Session][]
+[Session][]     [![Raspberry Pi](images/pi.png)][Pi] ![Linux](images/tux.png) ![Bash](images/bash.png)
 -----------
 
 [Session]: https://github.com/tarim8/session
@@ -43,19 +38,15 @@ Tarim Utilities
 
     session /tmp/omx.pgid omxplayer video.mp4
 
-  Allows the video to be terminated cleanly by:
+  allows the video to be terminated cleanly by:
 
     session -k /tmp/omx.pgid
-
-  ![Bash](images/bash.png)
-  ![Linux](images/tux.png)
-  [![Raspberry Pi](images/pi.png)][Pi]
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 
-[Waiter][]
+[Waiter][]      ![Arduino](images/arduino.png) ![C++](images/cpp.png)
 ----------
 
   [Waiter]: https://github.com/tarim8/Waiter
@@ -75,11 +66,39 @@ Tarim Utilities
 
   Creates a poll() routine which can be continually called (and not block) to flash an LED.
 
-  ![C++](images/cpp.png)
-  ![Arduino](images/arduino.png)
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+
+
+Projects
+========
+
+
+[Totems][]       ![Arduino](images/arduino.png) ![HTTP](images/http.png) ![C++](images/cpp.png)
+---------
+
+[Totems]: https://github.com/tarim8/totems
+
+  Wicker dolls carried by the audience in [Raucous](http://www.raucous.org.uk/) Stick House production had their own heartbeat and could become cold during the production.
+
+  The dolls contained small Arduino's (Leosticks), a remote control FM receiver, vibration motor and a Peltier heat exchanger.
+  Control is via an Arduino connected to an FM transmitter running a very rudimentary HTTP server which reads a submitted form.
+  In this case the Arduino was connected to a laptop but could equally well have a WiFi shield.
+
+### Notes
+  The vibration motor works well as a heartbeat.
+  The HTTP control system is effective and could easily be connected to other control systems.
+
+  The FM signalling worked reasonably but may have range problems in certain venues.
+  It is probably worth replacing this with a Zigbee mesh-net system even though this would take up slightly more space in the dolls.
+
+  The Peltier's don't go cold enough for the audience members to notice.
+  Trying to scale them up would involve too many power and heat dissipation problems to be practical.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
-  
+
 [Pi]: http://www.raspberrypi.org
