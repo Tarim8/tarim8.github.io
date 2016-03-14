@@ -46,6 +46,24 @@ Utilities
 
 
 
+[Connected][]     ![Linux](images/tux.png) ![Bash](images/bash.png)
+-----------
+
+[Connected]: https://github.com/tarim8/connected
+
+  Connect to line based services like computer emulators (multics) or games
+  (like adventure, or mud) with Bash command line editing and history.
+
+### Example
+
+  connect to SVE's Multics emulator:
+
+    connected telnet sve-multics.duckdns.org 6180
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
 [Waiter][]      ![Arduino](images/arduino.png) ![C++](images/cpp.png)
 ----------
 
