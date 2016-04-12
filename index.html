@@ -93,6 +93,38 @@
       ><hr
        /></div
     ></div
+  ><div id="anyonein-php"
+  ><h3
+    ><a href="https://github.com/tarim8/anyonein"
+      >Anyonein</a
+      > <img src="images/php.png" alt="PHP"
+       /></h3
+    ><p
+    >Anyonein is designed to report how long ago various sensors were last activated.</p
+    ><p
+    >Intended for use in communal spaces, like Hackspaces, where it's handy for people to be able to see if any one is in, or when they were last in.</p
+    ><p
+    >Anyonein simply logs the time a sensor was last activated through an HTTP interface. It doesn't do anything fancy like processing sensor data which should be done locally by the sensor and its controller.</p
+    ><div id="example-3"
+    ><h4
+      >Example</h4
+      ><pre
+      ><code
+	>http://example.com/anyonein/
+</code
+	></pre
+      ><p
+      >will display the current state of the sensors and refresh the page every two minutes.</p
+      ><pre
+      ><code
+	>http://example.com/anyonein/?sensor=light&amp;format=json&amp;show=display
+</code
+	></pre
+      ><p
+      >will update the light sensor and return the sensor status as a json object.</p
+      ><hr
+       /></div
+    ></div
   ><div id="waiter-arduino-c"
   ><h3
     ><a href="https://github.com/tarim8/Waiter"
@@ -102,7 +134,7 @@
        /></h3
     ><p
     >A class for Arduino to make it easier to wait for an amount of time without going blocked (kind of essential on a single threaded device like an Arduino).</p
-    ><div id="example-3"
+    ><div id="example-4"
     ><h4
       >Example</h4
       ><pre

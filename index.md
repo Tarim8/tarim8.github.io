@@ -64,6 +64,32 @@ Utilities
 
 
 
+[Anyonein][]        ![PHP](images/php.png)
+--------
+
+  [Anyonein]: https://github.com/tarim8/anyonein
+
+  Anyonein is designed to report how long ago various sensors were last activated.
+
+  Intended for use in communal spaces, like Hackspaces, where it's handy for
+  people to be able to see if any one is in, or when they were last in.
+
+  Anyonein simply logs the time a sensor was last activated through an HTTP
+  interface.  It doesn't do anything fancy like processing sensor data which
+  should be done locally by the sensor and its controller.
+
+### Example
+
+    http://example.com/anyonein/
+  will display the current state of the sensors and refresh the page every two minutes.
+
+    http://example.com/anyonein/?sensor=light&format=json&show=display
+  will update the light sensor and return the sensor status as a json object.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
 [Waiter][]      ![Arduino](images/arduino.png) ![C++](images/cpp.png)
 ----------
 
