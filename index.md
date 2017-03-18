@@ -56,9 +56,30 @@ Utilities
 
 ### Example
 
-  connect to SVE's Multics emulator:
-
     connected telnet sve-multics.duckdns.org 6180
+
+  Connect to SVE's Multics emulator
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+
+[Sherver][]     ![Linux](images/tux.png) ![Bash](images/bash.png)
+-----------
+
+[Sherver]: https://github.com/tarim8/sherver
+
+  A lightweight, bash script, CGI compatible web server
+
+### Example
+
+    sherver 8081 /srv/root --virtual-host default.com --cgi-bin "" --index-page dirindex --remote
+
+  Runs a web server on port 8081 with root of /srv/root/example.com for a
+request of http://example.com:8081/  Any executable files within the tree will
+be run as a CGI.  Asking for a directory will serve a file listing.
+REMOTE_PORT and REMOTE_ADDR will be set for CGI scripts.
+
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

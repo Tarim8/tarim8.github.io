@@ -83,13 +83,35 @@
     ><div id="example-2"
     ><h4
       >Example</h4
-      ><p
-      >connect to SVE's Multics emulator:</p
       ><pre
       ><code
 	>connected telnet sve-multics.duckdns.org 6180
 </code
 	></pre
+      ><p
+      >Connect to SVE's Multics emulator</p
+      ><hr
+       /></div
+    ></div
+  ><div id="sherver-linux-bash"
+  ><h3
+    ><a href="https://github.com/tarim8/sherver"
+      >Sherver</a
+      > <img src="images/tux.png" alt="Linux"
+       /> <img src="images/bash.png" alt="Bash"
+       /></h3
+    ><p
+    >A lightweight, bash script, CGI compatible web server</p
+    ><div id="example-3"
+    ><h4
+      >Example</h4
+      ><pre
+      ><code
+	>sherver 8081 /srv/root --virtual-host default.com --cgi-bin &quot;&quot; --index-page dirindex --remote
+</code
+	></pre
+      ><p
+      >Runs a web server on port 8081 with root of /srv/root/example.com for a request of http://example.com:8081/ Any executable files within the tree will be run as a CGI. Asking for a directory will serve a file listing. REMOTE_PORT and REMOTE_ADDR will be set for CGI scripts.</p
       ><hr
        /></div
     ></div
@@ -105,7 +127,7 @@
     >Intended for use in communal spaces, like Hackspaces, where it's handy for people to be able to see if any one is in, or when they were last in.</p
     ><p
     >Anyonein simply logs the time a sensor was last activated through an HTTP interface. It doesn't do anything fancy like processing sensor data which should be done locally by the sensor and its controller.</p
-    ><div id="example-3"
+    ><div id="example-4"
     ><h4
       >Example</h4
       ><pre
@@ -134,7 +156,7 @@
        /></h3
     ><p
     >A class for Arduino to make it easier to wait for an amount of time without going blocked (kind of essential on a single threaded device like an Arduino).</p
-    ><div id="example-4"
+    ><div id="example-5"
     ><h4
       >Example</h4
       ><pre
